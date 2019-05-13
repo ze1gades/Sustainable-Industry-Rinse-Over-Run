@@ -46,6 +46,4 @@ plt.legend(loc="best")
 plt.ylabel('ROC AUC')
 plt.xlabel(param_name)
 plt.title(u'Качество при варьировании параметра')
-plt.savefig("cross_val.png")
 plt.show()
-
