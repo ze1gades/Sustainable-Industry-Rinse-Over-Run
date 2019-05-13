@@ -57,9 +57,6 @@ model = [GradientBoostingRegressor(random_state=0, loss='quantile', alpha=0.28, 
 
 
 preds = [1, 2, 3, 4, 5, 6, 7, 8]
-print(submission_format.index)
-time.sleep(1)
-true = pd.read_csv('submission.csv', index_col=0)
 for i in tqdm(range(8), bar_format="%s{l_bar}%s{bar}%s{r_bar}" % (Fore.RESET, Fore.LIGHTGREEN_EX, Fore.RESET)):
     model[i].fit(train[i], train_labels.loc[train[i].index].values[:, 0])
     pred = model[i].predict(test[i])
